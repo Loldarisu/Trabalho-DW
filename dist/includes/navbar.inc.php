@@ -12,8 +12,11 @@
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-    
-      <li class="nav-item">
+        <li class="nav-item dropdown d-flex">
+          <i id="darkModeIcon" onclick="darkMode()" class="fas fa-moon my-auto text-dark m-0 darkmodeSwitch fs-5"></i>       
+        </li>
+
+        <li class="nav-item">
           <a class="nav-link text-light" href="eventos.php">Eventos</a>
         </li>
 
