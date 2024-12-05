@@ -1,50 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-pt">
 
-    <?php
-
-        include 'dist/includes/head.inc.php';
-
-    ?>
+    <?php include 'dist/includes/head.inc.php'; ?>
 
 <body style="overflow-y: auto;">
 
-    <?php
-
-        include 'dist/includes/navbar.inc.php';
-
-    ?>
-
-
-
-<html>
-<head>
-    <title>Eventos</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #e6f4ea;
-        }
-        .text-primary {
-            color: #28a745 !important;
-        }
-        .btn-success {
-            background-color: #28a745;
-            border-color: #28a745;
-        }
-        .btn-success:hover {
-            background-color: #218838;
-            border-color: #1e7e34;
-        }
-        .modal-header, .modal-footer {
-            border-color: #28a745;
-        }
-    </style>
-</head>
-<body class="overflow-y-auto">
+    <?php include 'dist/includes/navbar.inc.php'; ?>
 
     <div class="container mt-5">
         <div class="d-flex justify-content-between align-items-center">
@@ -57,7 +18,7 @@
 
     <!-- Modal Criar Evento -->
     <div class="modal fade" id="createEventModal" tabindex="-1" aria-labelledby="createEventLabel" aria-hidden="true">
-        <div class="modal-dialog ">
+        <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="createEventLabel">Criar Evento</h5>
@@ -87,23 +48,9 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+    <?php include 'dist/includes/footer.inc.php'; ?>
+
+    <!-- Correct Bootstrap Script -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
-
-
-    <?php
-
-        include 'dist/includes/footer.inc.php';
-
-    ?>
-
-    
-    
-<script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
-
-</body>
-
 </html>

@@ -1,24 +1,23 @@
-<html>
-<head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"></link>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-        }
-    </style>
-</head>
-<body class="overflow-y-auto bg-light">
+<!DOCTYPE html>
+<html lang="pt-pt">
 
-<?php
+<?php include 'dist/includes/head.inc.php'; ?>
 
-    include 'dist/includes/navbar.inc.php';
+<body>
 
-  ?>
+    <!-- Navbar Include -->
+    <?php include 'dist/includes/navbar.inc.php'; ?>
 
-    <div class="container mt-4">
+    <!-- Header Section -->
+    <div class="header text-center">
+        <h1 class="page-title">Gerir Atletas</h1>
+        <p class="page-subtitle">Adicione, edite ou consulte informações sobre os atletas</p>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container mt-5">
         <div class="row justify-content-center">
+            <!-- Search Form -->
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
@@ -36,10 +35,12 @@
                     </div>
                 </div>
             </div>
+
+            <!-- Add Athlete Form -->
             <div class="col-md-6 col-lg-4 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-body">
-                        <h2 class="card-title text-center text-primary mb-4">Adicionar Atleta</h2>
+                        <h2 class="card-title text-center mb-4">Adicionar Atleta</h2>
                         <form action="dist/includes/atletas.inc.php" method="POST">
                             <div class="mb-3">
                                 <label for="nome" class="form-label">Nome</label>
@@ -93,6 +94,11 @@
         </div>
     </div>
 
+    <!-- Footer Include -->
+    <?php include 'dist/includes/footer.inc.php'; ?>
+
+    <!-- Bootstrap Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
