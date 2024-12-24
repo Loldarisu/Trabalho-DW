@@ -1,56 +1,75 @@
-<!DOCTYPE html>
-<html lang="pt-pt">
 
-    <?php include 'dist/includes/head.inc.php'; ?>
+<?php include 'dist/includes/head.inc.php';?>
 
-<body style="overflow-y: auto;">
+<body class="eventos-page">
 
+    <!-- Include Navbar -->
     <?php include 'dist/includes/navbar.inc.php'; ?>
 
-    <div class="container mt-5">
-        <div class="d-flex justify-content-between align-items-center">
-            <h3 class="text-primary">Eventos</h3>
-            <button type="button" class="btn btn-success rounded-circle" data-bs-toggle="modal" data-bs-target="#createEventModal">
-                <i class="fas fa-plus"></i>
-            </button>
+    <div class="row">
+        <div class="col-10 offset-1 col-md-5 offset-md-1" style="margin-left:50px">
+            <div class="calendar-wrapper mt-5" id="calendar-wrapper"></div>
         </div>
-    </div>
 
-    <!-- Modal Criar Evento -->
-    <div class="modal fade" id="createEventModal" tabindex="-1" aria-labelledby="createEventLabel" aria-hidden="true">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="createEventLabel">Criar Evento</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <form>
-                    <div class="modal-body">
-                        <div class="mb-3">
-                            <label for="eventName" class="form-label">Nome do Evento</label>
-                            <input type="text" class="form-control" placeholder="ex: Volta a Portugal" id="eventName" name="eventName" minlength="3" maxlength="30" required>
-                        </div>
-                        <div class="mb-3">
-                            <label for="eventInfo" class="form-label">Informações do Evento</label>
-                            <textarea class="form-control" rows="2" placeholder="ex: Localização" id="eventInfo" name="eventInfo" minlength="5" maxlength="200" required></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <label for="eventDate" class="form-label">Data e Hora</label>
-                            <input type="datetime-local" step="1" class="form-control" name="eventDate" id="eventDate" required>
-                        </div>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="submit" class="btn btn-success">Criar</button>
-                    </div>
-                </form>
+        <div class="col-11 offset-1 col-md-5 offset-md-1" style="">
+            <h3 class="text-primary mt-5">Eventos <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#CriarEventoModal" style="border-radius:50%;margin-left:20px"><i class="fas fa-plus"></i></button></h3>
+            
+            <div id="divajax">
+
+                <!-- Chamada de dist/includes/ajax.inc.php feita em dist/js/calendar.js -->
+
+                <!-- Sistema AJAX que permite atualizar a query dos eventos da base de
+                dados quando se altera o dia, mês ou ano, mostrando apenas os eventos 
+                do dia selecionado, caso existam! -->
+                
             </div>
+
         </div>
     </div>
 
+    <!-- Include Footer -->
     <?php include 'dist/includes/footer.inc.php'; ?>
 
-    <!-- Correct Bootstrap Script -->
+
+    <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script type="text/javascript" src="dist/js/calendar.js"></script>
+
+
+<script>
+
+var currentDate = new Date();
+var dd = String(currentDate.getDate()).padStart(2, '0');
+var mm = String(currentDate.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = currentDate.getFullYear();
+
+currentDate = mm + '/' + dd + '/' + yyyy;
+
+var config = `
+    function selectDate(date) {
+      $('#calendar-wrapper').updateCalendarOptions({
+        date: date
+      });
+      console.log(calendar.getSelectedDate());
+    }
+
+    var defaultConfig = {
+      weekDayLength: 1,
+      date: '` + currentDate + `',
+      onClickDate: selectDate,
+      showYearDropdown: true,
+      startOnMonday: true,
+    };
+
+    var calendar = $('#calendar-wrapper').calendar(defaultConfig);
+    console.log(calendar.getSelectedDate());
+    `;
+
+eval(config);
+
+</script>
+
 </body>
+
 </html>
