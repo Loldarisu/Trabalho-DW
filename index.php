@@ -1,14 +1,20 @@
+<?php
+require 'dist/includes/settings.inc.php';
+include 'dist/includes/db.inc.php';
+db_connect();
+?>
+
 <!DOCTYPE HTML>
+
 <html lang="pt-pt">
 
-  <?php include 'dist/includes/head.inc.php';?>
+  <?php include $arrSETTINGS['dir_site'].'/dist/includes/head.inc.php';  ?>
 
 <body style="overflow-y: auto;">
 
-  <?php
-     include 'dist/includes/navbar.inc.php';
-  ?>
-    
+  <?php include $arrSETTINGS['dir_site'].'/dist/includes/navbar.inc.php';  ?>
+
+
   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="false">
     <div class="carousel-indicators">
       <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active"
@@ -26,13 +32,13 @@
 
       <p>
         <a href="#regras" class="btn border-0" style="width:100%;background-color: #0b2027;color:#8FC0A9">Regras</a>
-      </p>  
+      </p>
 
     </div>
 
     <div class="carousel-inner">
 
-      <div class="carousel-item active" data-bs-interval="5000">
+      <div class="carousel-item active" data-bs-interval="4000">
         <img src="images/slide1.jpg" class="d-block w-100" alt="Ciclismo">
         <div class="carousel-caption d-none d-md-block">
           <h5>Bem Vindo!</h5>
@@ -40,7 +46,7 @@
         </div>
         
       </div>
-      <div class="carousel-item" data-bs-interval="5000">
+      <div class="carousel-item" data-bs-interval="4000">
         <img src="images/slide2.jpg" class="d-block w-100" alt="Pedalar">
         <div class="carousel-caption d-none d-md-block">
           <h5>Bem Vindo!</h5>
@@ -48,7 +54,7 @@
         </div>
         
       </div>
-      <div class="carousel-item" data-bs-interval="5000">
+      <div class="carousel-item" data-bs-interval="4000">
         <img src="images/slide3.jpg" class="d-block w-100" alt="Competição">
         <div class="carousel-caption d-none d-md-block">
           <h5>Bem Vindo!</h5>
@@ -75,23 +81,25 @@
     </button>
   </div>
 
+
   <section style="margin-top: 30px;">
     <h3 class="text-primary" style="text-align:center" id="quemsomos">Quem Somos?</h3>
     <p class="text-primary" style="padding: 30px;text-align: center;">Dar ao Pedal surgiu de um trabalho no qual se pretendia criar uma aplicação Web para ajudar 
       um gestor desportivo a alocar os atletas da sua equipa por subequipas (formações) que vão competir em provas.
-      Assim, eu, Pedro Miguel Vieira Moreira, aluno do 3º ano de Informatica de gestão, desenvolvi este 
+      Assim, eu, Pedro Miguel Vieira Moriera, aluno do 3º ano de Informatica de gestão, desenvolvi este 
       website, desde o seu código e base de dados até ao design envolvido de modo a satisfazer as necessidades do utilizador e agradar a quem utiliza o Dar ao Pedal.
     </p>
     <p class="text-primary" style="text-align: center;padding: 30px;">Aqui é possível consultar, adicionar, editar e eliminar tanto atletas como equipas e 
-    eventos</p>
+    eventos, cumprindo assim as características CRUD.</p>
     <p style="text-align: center;"><img src="images/logo.png" alt=""></p>
-  </section>  
+  </section>
+
   <section style="margin-top: 50px;padding: 30px;">
     <h3 class="text-primary" style="text-align:center" id="regras">Regras</h3>
 
     <table class="table table-hover text-primary" style="margin-top: 30px;">
       <thead>
-        <p class="text-primary" style="margin-top: 30px;">Escalões de Potência</p>
+        <p class="text-primary" style="margin-top: 30px;">Escalões de Potência:</p>
         <tr>
           
           <th scope="col">Categoria</th>
@@ -130,7 +138,7 @@
 
     <table class="table table-hover text-primary" style="margin-top: 30px;">
       <thead>
-        <p class="text-primary" style="margin-top: 30px;">Regras para participação em provas (masculino)</p>
+        <p class="text-primary" style="margin-top: 30px;">Regras para participação em provas (masculino):</p>
         <tr>
           <th scope="col">Categoria</th>
           <th scope="col">5 a 8 atletas</th>
@@ -169,7 +177,7 @@
 
     <table class="table table-hover text-primary" style="margin-top: 30px;">
       <thead>
-        <p class="text-primary" style="margin-top: 30px;">Regras para participação em provas (feminino)</p>
+        <p class="text-primary" style="margin-top: 30px;">Regras para participação em provas (feminino):</p>
         <tr>
           <th scope="col">Categoria</th>
           <th scope="col">5 a 8 atletas</th>
@@ -208,17 +216,12 @@
 
   </section>
 
-  <?php
 
-    include 'dist/includes/footer.inc.php';
-
-  ?>
-
+  <?php include $arrSETTINGS['dir_site'].'/dist/includes/footer.inc.php';  ?>
+  
 
   <script type="text/javascript" src="dist/js/main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
-
 
 </body>
 
