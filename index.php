@@ -216,7 +216,8 @@
 
 
   <script type="text/javascript" src="dist/js/main.js"></script>
-  <script type="text/javascript" src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 
 
 </body>
