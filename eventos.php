@@ -1,6 +1,6 @@
 <?php
 require 'dist/includes/settings.inc.php';
-include 'dist/includes/db.inc.php';
+include $arrSETTINGS['dir_site'].'/dist/includes/db.inc.php';
 db_connect();
 ?>
 
@@ -9,7 +9,7 @@ db_connect();
 
     <?php
 
-        include 'dist/includes/head.inc.php';
+        include $arrSETTINGS['dir_site'].'/dist/includes/head.inc.php';
 
     ?>
 
@@ -17,13 +17,13 @@ db_connect();
 
     <?php
 
-        include 'dist/includes/navbar.inc.php';
+        include $arrSETTINGS['dir_site'].'/dist/includes/navbar.inc.php';
 
     ?>
 
     <?php
 
-    include 'dist/includes/toasts.inc.php';
+    include $arrSETTINGS['dir_site'].'/dist/includes/toasts.inc.php';
 
     ?>
 
@@ -153,7 +153,7 @@ db_connect();
 
     <?php
 
-        include 'dist/includes/footer.inc.php';
+        include $arrSETTINGS['dir_site'].'/dist/includes/footer.inc.php';
 
     ?>
 
@@ -193,8 +193,9 @@ db_connect();
     </script>
 
     <script src="dist/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js"></script>
-    <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
 
     <script>
         var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
