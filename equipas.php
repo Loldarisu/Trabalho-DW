@@ -431,7 +431,7 @@ if((!isset($_GET['masculino']))&&(!isset($_GET['feminino']))){
     </div>
 
     <!-- Modal Criar Equipa -->
-    <div class="modal fade" id="CriarEquipaModal" tabindex="-1" aria-labelledby="criarequipalabel" aria-hidden="true">
+    <div class="modal fade center" id="CriarEquipaModal" tabindex="-1" aria-labelledby="criarequipalabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
