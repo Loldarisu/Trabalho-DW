@@ -18,11 +18,8 @@ if($_SERVER['HTTP_HOST'] == 'daraopedal.000webhostapp.com') {
 
 } else {
 
-    $arrSETTINGS['dir_site'] = 'C:/xampp/htdocs/Daraopedal1';
-    $arrSETTINGS['url_site'] = 'http://localhost/Daraopedal1';
-    $arrSETTINGS['dir_site_adm'] = 'C:/xampp/htdocs/Daraopedal1/admin';
-    $arrSETTINGS['url_site_adm'] = 'http://localhost/Daraopedal1/admin';
-    
+   
+
 
     // definições de variáveis para ligar ao servidor MYSQL
     $arrSETTINGS['hostname'] = 'localhost';

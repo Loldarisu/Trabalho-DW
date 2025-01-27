@@ -7,7 +7,7 @@ db_connect();
 if(isset($_POST['ideventoapagarmodal'])){
     $id = $_POST['ideventoapagarmodal'];
 }else{
-    header('Location: '.$arrSETTINGS['url_site'].'/eventos.php?success=0');
+    header('Location: '.'/daraopedal/eventos.php?success=0');
     die();
 }
 
@@ -17,7 +17,7 @@ db_query($query);
 $query = "DELETE FROM equipasevento WHERE id_evento = '$id'";
 db_query($query);
 
-header('Location: '.$arrSETTINGS['url_site'].'/eventos.php?success=1');
+header('Location: '.'/daraopedal/eventos.php?success=1');
 die();
 
 ?>

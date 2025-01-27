@@ -8,11 +8,11 @@ db_connect();
 
 <html lang="pt-pt">
 
-  <?php include $arrSETTINGS['dir_site'].'/dist/includes/head.inc.php';  ?>
+  <?php include 'dist/includes/head.inc.php';  ?>
 
 <body style="overflow-y: auto;">
 
-  <?php include $arrSETTINGS['dir_site'].'/dist/includes/navbar.inc.php';  ?>
+  <?php include 'dist/includes/navbar.inc.php';  ?>
 
 
   <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel" data-bs-pause="false">
@@ -217,7 +217,7 @@ db_connect();
   </section>
 
 
-  <?php include $arrSETTINGS['dir_site'].'/dist/includes/footer.inc.php';  ?>
+  <?php include 'dist/includes/footer.inc.php';  ?>
   
 
   <script type="text/javascript" src="dist/js/main.js"></script>

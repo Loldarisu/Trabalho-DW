@@ -1,6 +1,6 @@
 <?php
 require 'dist/includes/settings.inc.php';
-include $arrSETTINGS['dir_site'].'/dist/includes/db.inc.php';
+include 'dist/includes/db.inc.php';
 db_connect();
 ?>
 
@@ -9,7 +9,7 @@ db_connect();
 
     <?php
 
-        include $arrSETTINGS['dir_site'].'/dist/includes/head.inc.php';
+        include 'dist/includes/head.inc.php';
 
     ?>
 
@@ -17,13 +17,13 @@ db_connect();
 
     <?php
 
-        include $arrSETTINGS['dir_site'].'/dist/includes/navbar.inc.php';
+        include 'dist/includes/navbar.inc.php';
 
     ?>
 
     <?php
 
-    include $arrSETTINGS['dir_site'].'/dist/includes/toasts.inc.php';
+    include 'dist/includes/toasts.inc.php';
 
     ?>
 
@@ -153,7 +153,7 @@ db_connect();
 
     <?php
 
-        include $arrSETTINGS['dir_site'].'/dist/includes/footer.inc.php';
+        include 'dist/includes/footer.inc.php';
 
     ?>
 

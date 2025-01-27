@@ -83,6 +83,6 @@ switch ($genero){
 $query = "INSERT INTO atletas (nome, email, peso, altura, potfunc, id_potfunc, gen, nasc) VALUES ('$nome', '$email', '$peso', '$altura', '$potfunc', '$id_potfunc', '$genero', '$data')";
 db_query($query);
 
-header('Location: '.$arrSETTINGS['url_site'].'/atletas.php?success=1');
+header('Location: '.'/daraopedal/atletas.php?success=1');
 
 ?>
