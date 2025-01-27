@@ -7,7 +7,7 @@ db_connect();
 if(isset($_POST['removeratletaid'])){
     $id = $_POST['removeratletaid'];
 }else{
-    header('Location: '.$arrSETTINGS['url_site'].'/atletas.php?success=0');
+    header('Location: '..'../../atletas.php?success=0');
     die();
 }
 
@@ -17,7 +17,7 @@ db_query($query);
 $query = "DELETE FROM membrosequipa WHERE id_atleta = '$id'";
 db_query($query);
 
-header('Location: '.$arrSETTINGS['url_site'].'/atletas.php?success=1');
+header('Location: '.'../../atletas.php?success=1');
 die();
 
 ?>

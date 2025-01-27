@@ -7,7 +7,7 @@ db_connect();
 if(isset($_POST['nomeequipa'])){
     $nome = $_POST['nomeequipa'];
 }else{
-    header('Location: '.$arrSETTINGS['url_site'].'/equipas.php?success=0');
+    header('Location: '.'../../equipas.php?success=0');
     die();
 }
 
@@ -18,7 +18,7 @@ if($VerifNome!=null){
     foreach($VerifNome as $v){
 
         if($nome == $v['nome']){
-            header('Location: '.$arrSETTINGS['url_site'].'/equipas.php?success=0');
+            header('Location: '.'../../equipas.php?success=0');
             die();
         }
 
@@ -28,6 +28,6 @@ if($VerifNome!=null){
 $query = "INSERT INTO equipas (nome) VALUES ('$nome')";
 db_query($query);
 
-header('Location: '.$arrSETTINGS['url_site'].'/equipas.php?success=1');
+header('Location: '.'../../equipas.php?success=1');
 
 ?>

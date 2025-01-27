@@ -1,6 +1,6 @@
 <?php
 require 'dist/includes/settings.inc.php';
-include $arrSETTINGS['dir_site'].'/dist/includes/db.inc.php';
+include 'dist/includes/db.inc.php';
 db_connect();
 
 if(isset($_GET['id'])){
@@ -17,7 +17,7 @@ if(isset($_GET['id'])){
 
     <?php
 
-    include $arrSETTINGS['dir_site'].'/dist/includes/head.inc.php';
+    include 'dist/includes/head.inc.php';
 
     ?>
 
@@ -25,13 +25,13 @@ if(isset($_GET['id'])){
 
     <?php
 
-    include $arrSETTINGS['dir_site'].'/dist/includes/navbar.inc.php';
+    include 'dist/includes/navbar.inc.php';
 
     ?>
 
     <?php
 
-    include $arrSETTINGS['dir_site'].'/dist/includes/toasts.inc.php';
+    include 'dist/includes/toasts.inc.php';
 
     ?>
 
@@ -110,7 +110,7 @@ if(isset($_GET['id'])){
            
     <?php
 
-    include $arrSETTINGS['dir_site'].'/dist/includes/footer.inc.php';
+    include 'dist/includes/footer.inc.php';
 
     ?>
 

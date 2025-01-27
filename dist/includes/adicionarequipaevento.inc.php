@@ -8,13 +8,13 @@ if((isset($_POST['idequipamodaladicionar']))&&(isset($_POST['ideventomodaladicio
     $idequipa = $_POST['idequipamodaladicionar'];
     $idevento = $_POST['ideventomodaladicionar'];
 }else{
-    header('Location: '.$arrSETTINGS['url_site'].'/eventos.php?success=0');
+    header('Location: '.'../../eventos.php?success=0');
     die();
 }
 
 $query = "INSERT INTO equipasevento (id_equipa, id_evento) VALUES ('$idequipa', '$idevento')";
 db_query($query);
 
-header('Location: '.$arrSETTINGS['url_site'].'/eventos.php?success=1');
+header('Location: '.'../../eventos.php?success=1');
 
 ?>

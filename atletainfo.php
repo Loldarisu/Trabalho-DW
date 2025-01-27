@@ -22,7 +22,7 @@ $Atleta = db_query($query);
 
     <?php
 
-    include $arrSETTINGS['dir_site'].'/dist/includes/head.inc.php';
+    include 'dist/includes/head.inc.php';
 
     ?>
 
@@ -30,13 +30,13 @@ $Atleta = db_query($query);
 
     <?php
 
-    include $arrSETTINGS['dir_site'].'/dist/includes/navbar.inc.php';
+    include 'dist/includes/navbar.inc.php';
 
     ?>
 
     <?php
 
-    include $arrSETTINGS['dir_site'].'/dist/includes/toasts.inc.php';
+    include 'dist/includes/toasts.inc.php';
 
     ?>
 
@@ -147,7 +147,7 @@ $Atleta = db_query($query);
 
     <?php
 
-    include $arrSETTINGS['dir_site'].'/dist/includes/footer.inc.php';
+    include 'dist/includes/footer.inc.php';
 
     ?>
 

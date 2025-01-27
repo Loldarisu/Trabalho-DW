@@ -22,7 +22,7 @@ if($VerifEmails!=null){
     foreach($VerifEmails as $v){
 
         if($email==$v['email']){
-            header('Location: '.$arrSETTINGS['url_site'].'/atletas.php?success=0');
+            header('Location: '.'../../atletas.php?success=0');
             die();
         }
     
@@ -83,6 +83,6 @@ switch ($genero){
 $query = "INSERT INTO atletas (nome, email, peso, altura, potfunc, id_potfunc, gen, nasc) VALUES ('$nome', '$email', '$peso', '$altura', '$potfunc', '$id_potfunc', '$genero', '$data')";
 db_query($query);
 
-header('Location: '.'/daraopedal/atletas.php?success=1');
+header('Location: '.'../../atletas.php?success=1');
 
 ?>

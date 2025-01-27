@@ -8,7 +8,7 @@ if(isset($_POST['selectequipa']) && isset($_POST['idatleta'])){
     $idequipa = $_POST['selectequipa'];
     $idatleta = $_POST['idatleta'];
 }else{
-    header('Location: '.$arrSETTINGS['url_site'].'/equipas.php?success=0');
+    header('Location: '.'../../equipas.php?success=0');
     die();
 }
 
@@ -20,13 +20,13 @@ if($verify==null){
     db_query($query);
 }else{
 
-    header('Location: '.$arrSETTINGS['url_site'].'/equipas.php?success=0');
+    header('Location: '.'../../equipas.php?success=0');
     die();
 
 }
 
 
 
-header('Location: '.$arrSETTINGS['url_site'].'/equipas.php?success=1');
+header('Location: '.'../../equipas.php?success=1');
 
 ?>
